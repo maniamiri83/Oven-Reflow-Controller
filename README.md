@@ -59,6 +59,11 @@ All control logic is written in **8052 Assembly** — no HAL, no RTOS.
 
 **5-Stage Reflow FSM**
 
+FSM state transitions and Python GUI data flow
+
+<img width="452" height="210" alt="hardware" src="https://github.com/user-attachments/assets/af6d91e1-4e12-4283-9afb-068cbb016b5e" />
+
+---
 | State | Action | Power |
 |---|---|---|
 | S0 — Idle | Awaiting start | 0% |
