@@ -36,8 +36,6 @@ Toaster oven during reflow stage
 <img width="4032" height="3024" alt="Project1Picture3" src="https://github.com/user-attachments/assets/6d3abc0c-1ea7-4129-b3a0-114ecd2b7306" />
 
 
----
-
 | Component | Role |
 |---|---|
 | DE10-Lite (8052 MCU core) | Main controller — runs all firmware |
