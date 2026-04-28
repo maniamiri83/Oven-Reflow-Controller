@@ -10,6 +10,8 @@
 
 ---
 
+Temperature validation — DE10-Lite vs Fluke 45 multimeter across full reflow cycle
+
 <img width="2560" height="1495" alt="Project1Plot" src="https://github.com/user-attachments/assets/0b8a805f-a2d7-4f44-99fb-7dfbd7eb4d5b" />
 
 ---
