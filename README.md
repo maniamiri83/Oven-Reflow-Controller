@@ -2,21 +2,39 @@
 
 8052 Assembly firmware on a DE10-Lite FPGA that turns a consumer toaster oven into a precision reflow soldering station. Drives a solid-state relay via PWM through a 5-stage finite state machine, reads a K-type thermocouple through a custom analog front-end, and streams live temperature data to a Python validation GUI. Successfully soldered EFM8 microcontroller boards.
 
-**[▶ Watch Demo on YouTube](https://m.youtube.com/watch?v=fs8jwbeQrqk&ra=m)**
+---
+
+## Demo (click to play)
+
+[![Demo](https://img.youtube.com/vi/fs8jwbeQrqk/maxresdefault.jpg)](https://m.youtube.com/watch?v=fs8jwbeQrqk&ra=m)
 
 ---
 
-![Reflow cycle temperature plot — DE10-Lite vs Fluke multimeter](<img width="2560" height="1495" alt="Project1Plot" src="https://github.com/user-attachments/assets/e86a85b7-1a89-43bc-a114-01c1512d1c8f" />)
+<img width="2560" height="1495" alt="Project1Plot" src="https://github.com/user-attachments/assets/0b8a805f-a2d7-4f44-99fb-7dfbd7eb4d5b" />
 
 ---
 
 ## Hardware
 
-![Full system — DE10-Lite FPGA board with analog front-end breadboard](<img width="3024" height="4032" alt="Project1Picture1" src="https://github.com/user-attachments/assets/7ed1495a-96e9-4ef6-9cd1-31a0ac638651" />)
+Full system — DE10-Lite FPGA board with analog front-end breadboard
 
-![Analog front-end — OP07 amplifier, LM335 cold-junction sensor, LCD display](<img width="3024" height="4032" alt="Project1Picture2" src="https://github.com/user-attachments/assets/085a2f92-aef1-40a0-83c3-5da46c08c138" />)
+<img width="3024" height="4032" alt="Project1Picture1" src="https://github.com/user-attachments/assets/c8fdee13-c797-4d5d-88fd-84f25ba7be9f" />
 
-![Black & Decker toaster oven during reflow stage](<img width="4032" height="3024" alt="Project1Picture3" src="https://github.com/user-attachments/assets/fbea7107-45ec-4b68-bd43-578095628797" />)
+---
+
+Analog front-end — OP07 amplifier, LM335 cold-junction sensor, LCD display
+
+
+<img width="3024" height="4032" alt="Project1Picture2" src="https://github.com/user-attachments/assets/2995d866-c593-47b9-a872-851d57cdb004" />
+
+---
+
+Toaster oven during reflow stage
+
+<img width="4032" height="3024" alt="Project1Picture3" src="https://github.com/user-attachments/assets/6d3abc0c-1ea7-4129-b3a0-114ecd2b7306" />
+
+
+---
 
 | Component | Role |
 |---|---|
@@ -63,7 +81,7 @@ T=<temp>C <soak_temp> <soak_time> <reflow_temp> <reflow_time> <FSM_state>
 
 ## Python Validation GUI
 
-`serial_reader.py` reads two serial ports simultaneously — the DE10-Lite MCU and the Fluke 45 multimeter — converting multimeter voltage readings to temperature via NIST K-type thermocouple polynomials (`kconvert.py`). A live [Dear PyGui](https://github.com/hoffstadt/DearPyGui) stripchart plots both temperature curves in real time and computes the error at each sample. Data can be exported to CSV.
+`serial_reader.py` reads two serial ports simultaneously — the DE10-Lite MCU and the Fluke 45 multimeter — converting multimeter voltage readings to temperature via NIST K-type thermocouple polynomials (`kconvert.py`). A live stripchart plots both temperature curves in real time and computes the error at each sample. Data can be exported to CSV.
 
 **Measured accuracy: consistently < 3 °C error across full reflow cycles** (worst case observed during rapid ramp-up; steady-state error typically < 1 °C).
 
