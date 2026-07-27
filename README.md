@@ -51,7 +51,7 @@ Toaster oven during reflow stage
 
 ## Firmware Architecture
 
-All control logic is written in **8052 Assembly** — no HAL, no RTOS.
+All control logic is written in **8052 Assembly**
 
 **Timer0 ISR (1 ms)** — PWM heartbeat. Compares `PWM_Count` against `PWM_Threshold` to drive `SSR_PIN` high or low. Also increments a 1 s `mf` flag and a 200 ms `refresh_flag` consumed by the main loop.
 
